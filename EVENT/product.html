@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Launch Event</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Product Launch Event</h1>
+  </header>
+
+  <section>
+    <h2>Event Details</h2>
+    <p><strong>Date and Time:</strong> November 30, 2023, 10:00 AM - 2:00 PM</p>
+    <p><strong>Venue:</strong> Grand Ballroom, XYZ Convention Center</p>
+    <p><strong>Description:</strong> Join us for the exciting launch of our new product. Be the first to experience groundbreaking features and innovations. Don't miss this exclusive event!</p>
+  </section>
+
+  <section>
+    <h2>Registration</h2>
+    <form id="productLaunchRegistrationForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="company">Company:</label>
+      <input type="text" id="company" name="company" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+      <small>Format: 1234567890</small>
+
+      <button type="submit">Register</button>
+    </form>
+  </section>
+
+  <script>
+    document.getElementById('productLaunchRegistrationForm').addEventListener('submit', function(event) {
+      // Prevent the form from submitting
+      event.preventDefault();
+
+      // Perform your registration logic here
+      // You can access form fields using event.target.name.value, event.target.email.value, etc.
+      // For simplicity, let's just log the form data to the console
+      console.log('Name:', event.target.name.value);
+      console.log('Email:', event.target.email.value);
+      console.log('Company:', event.target.company.value);
+      console.log('Phone Number:', event.target.phone.value);
+    });
+  </script>
+
+</body>
+</html>
